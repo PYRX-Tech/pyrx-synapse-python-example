@@ -1,0 +1,2 @@
+pyrx-synapse
+python-dotenv
