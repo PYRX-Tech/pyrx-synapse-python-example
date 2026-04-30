@@ -1,22 +1,37 @@
 # Synapse Python Example
 
-Example showing how to use [pyrx-synapse](https://pypi.org/project/pyrx-synapse/) with Python.
+All 16 SDK endpoints with [pyrx-synapse](https://pypi.org/project/pyrx-synapse/).
 
 ## Setup
 
 1. `python -m venv .venv && source .venv/bin/activate`
 2. `pip install -r requirements.txt`
-3. Copy `.env.example` to `.env` and fill in your API key
-4. Run an example:
+3. Copy `.env.example` to `.env`
 
+## Examples
+
+### Core
 ```bash
-python track_event.py
-python identify_contact.py
-python send_email.py
-python async_example.py
+python track_event.py        # Track event
+python track_batch.py        # Batch track
+python identify_contact.py   # Identify contact
+python identify_batch.py     # Batch identify
+python send_email.py         # Send email
+python async_example.py      # Async client
 ```
 
-## Learn more
+### Contacts
+```bash
+python contacts_list.py      python contacts_get.py
+python contacts_update.py    python contacts_delete.py
+```
 
-- [Synapse Documentation](https://synapse.pyrx.tech/developers)
-- [Python SDK Reference](https://synapse.pyrx.tech/developers/sdks/python)
+### Templates
+```bash
+python templates_list.py     python templates_get.py
+python templates_create.py   python templates_update.py
+python templates_delete.py   python templates_preview.py
+```
+
+- [Synapse Docs](https://synapse.pyrx.tech/developers)
+- [Python SDK](https://synapse.pyrx.tech/developers/sdks/python)
