@@ -6,7 +6,7 @@ PASS=0; FAIL=0
 [[ -z "${SYNAPSE_API_KEY:-}" ]] && echo "Set SYNAPSE_API_KEY" && exit 1
 
 echo "Installing..."
-pip install -q -r requirements.txt > /dev/null 2>&1
+pip install -q -r requirements.txt 2>&1 | tail -1 > /dev/null 2>&1
 
 run_script() {
   local name="$1" cmd="$2"
