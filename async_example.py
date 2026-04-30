@@ -8,7 +8,7 @@ load_dotenv()
 async def main():
     async with AsyncSynapse(
         api_key=os.environ["SYNAPSE_API_KEY"],
-        workspace_id=os.environ["SYNAPSE_WORKSPACE_ID"],
+        workspace_id=os.environ["SYNAPSE_WORKSPACE_ID"], base_url=os.environ.get("SYNAPSE_API_URL", "https://synapse-api.pyrx.tech"),
     ) as client:
         await client.track(
             external_id="user_123",
